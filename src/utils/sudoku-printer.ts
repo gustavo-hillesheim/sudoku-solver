@@ -1,5 +1,5 @@
-import { Sudoku } from "./structure/sudoku";
-import { SUDOKU_SIZE } from "./constants";
+import { Sudoku } from "../structure/sudoku";
+import { SUDOKU_SIZE } from "../constants";
 
 export class SudokuPrinter {
 

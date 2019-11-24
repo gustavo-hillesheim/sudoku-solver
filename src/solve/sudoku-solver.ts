@@ -1,5 +1,5 @@
-import {  OnlyPossibilitySolvingAlgorithm } from './solve/solving-algorithm';
-import { Sudoku } from "./structure/sudoku";
+import {  OnlyPossibilitySolvingAlgorithm } from './solving-algorithm';
+import { Sudoku } from "../structure/sudoku";
 
 export class SudokuSolver {
 
