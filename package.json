@@ -5,9 +5,8 @@
   "main": "dist/index.js",
   "scripts": {
     "build": "tsc",
-    "start": "node dist/index.js",
-    "serve": "rd /s /q dist & npm run build & npm run start",
-    "dev": "nodemon --watch src -e * --exec npm run serve"
+    "start": "tsc & node dist/index.js",
+    "dev": "nodemon --watch src -e * --exec npm run start"
   },
   "author": "",
   "license": "ISC",
