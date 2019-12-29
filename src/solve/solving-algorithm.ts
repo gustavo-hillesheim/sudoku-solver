@@ -27,11 +27,12 @@ function fillSudokuSquares(sudoku: Sudoku, squaresToFill: SquareToFill[]): void 
 
   if (squaresToFill && squaresToFill.length) {
 
-    squaresToFill.forEach(({ square, value }) => {
+    squaresToFill
+      .forEach(({ square, value }) => {
 
-      square.value = value;
-      squarePossibilityManager.removeValueFromGroupPossibilities(square);
-    });
+        square.value = value;
+        squarePossibilityManager.removeValueFromGroupPossibilities(square);
+      });
   }
 }
 
@@ -96,7 +97,7 @@ export class OnlyPossibilityInGroupSolvingAlgorithm implements SolvingAlgorithm 
     return possibilities
       .find(possibility => {
 
-        return squareGroup.squares
+        return !squareGroup.squares
           .filter(square => !square.value)
           .some(groupSquare => {
 

@@ -2,6 +2,7 @@ import { Sudoku } from '../src/structure/sudoku';
 import { SudokuVerifier } from '../src/solve/sudoku-verifier';
 import { SudokuSolver } from '../src/solve/sudoku-solver';
 import { SquarePossibilityManager } from '../src/utils/square-possibility-manager';
+
 describe('Sudoku Solver', () => {
   
   const squarePossibilityManager = new SquarePossibilityManager();
@@ -62,6 +63,6 @@ describe('Sudoku Solver', () => {
     squarePossibilityManager.calculateSquaresPossibilities(sudoku);
     const solvedSudoku = solver.solve(sudoku);
     const isSudokuSolved = verifier.isSolved(solvedSudoku);
-    //expect(isSudokuSolved).toBe(true);
+    expect(isSudokuSolved).toBe(true);
   });
 });
